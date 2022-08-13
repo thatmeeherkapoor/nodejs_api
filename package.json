@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "simple API to perform simple CRUD operations.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js", 
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "repository": {
@@ -20,5 +21,10 @@
   "homepage": "https://github.com/thatmeeherkapoor/nodejs_api#readme",
   "devDependencies": {
     "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "mongodb": "^4.8.1",
+    "mongoose": "^6.5.2",
+    "prompt-sync": "^4.2.0"
   }
 }

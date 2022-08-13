@@ -1,6 +1,17 @@
+//Important libraries. 
+import express from "express";
+import mongoose from "mongoose";
+
+//Create the auth string responsible for connecting to the database. 
+const uri = "mongodb+srv://nodejs-server-trial-m:meeher23@cluster0.8rwavg2.mongodb.net/?retryWrites=true&w=majority";
+
 //Initial configuration of the server.
-const express = require("express");
 const app = express(); 
+
+//Connect to the database using the uri link. 
+mongoose.connect(uri)
+        .then((res) => console.log("connected to mongo"))
+        .catch((error) => console.log(error));
 
 /**
  * The application can send a request and get a response on the /user endpoint.
@@ -17,5 +28,6 @@ app.get("/user", (req, res) => {
 app.listen(8080, () => {
     console.log("server started on port 8080.") //Callback displays message on console about server status. 
 });
+
 
 
