@@ -4,8 +4,8 @@
   "description": "simple API to perform simple CRUD operations.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js", 
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/thatmeeherkapoor/nodejs_api/issues"
   },
-  "homepage": "https://github.com/thatmeeherkapoor/nodejs_api#readme"
+  "homepage": "https://github.com/thatmeeherkapoor/nodejs_api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
