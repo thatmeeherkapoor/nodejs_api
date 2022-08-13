@@ -16,6 +16,10 @@ step 6. To run the whole program type npm start in terminal.
  
 *------------------------------------------------------------------------------*
 
-step 1. create an endpoint as shown in the index.js file.
+Create an endpoint on the server as shown in the index.js file. This endpoint 
+can be accessed using the world wide web on the localhost:portNumber that the server 
+is running on. 
 
-step 2. 
+The request and response object can be manipulated on the server code.
+
+*-----------------------------------------------------------------------------*
