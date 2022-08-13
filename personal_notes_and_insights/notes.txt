@@ -1,0 +1,21 @@
+step 1. npm init -y 
+- initialises a nodejs project that uses the npm package manager. 
+- the -y gives a yes to all questions asked in terminal 
+
+step 2. npm install express 
+- installs the express app for you.
+
+step 3. follow basic lines of code to set up the server on a port. 
+
+step 4. in the package.json file -> add start script under scripts. 
+
+step 5. that is script: node index.js (it runs index.js file 
+with node)
+
+step 6. To run the whole program type npm start in terminal. 
+ 
+*------------------------------------------------------------------------------*
+
+step 1. create an endpoint as shown in the index.js file.
+
+step 2. 
