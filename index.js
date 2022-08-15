@@ -1,6 +1,8 @@
 //Important libraries. 
 import express from "express";
 import mongoose from "mongoose";
+//Importing the database model. 
+import { UserData } from "./models/user.js";
 
 //Create the auth string responsible for connecting to the database. 
 const uri = "mongodb+srv://nodejs-server-trial-m:meeher23@cluster0.8rwavg2.mongodb.net/?retryWrites=true&w=majority";
@@ -22,6 +24,29 @@ mongoose.connect(uri)
 app.get("/user", (req, res) => { 
     //The response sends a HTML header tag showing hello world, when accessed in the browser using the /user endpoint. 
     res.send("<h1>Hello World !!! (:</h1>");
+});
+
+/**
+ * The endpoint is responsible for adding a particular database entry into the mongoDB database. 
+ * Create a user object and then set the various DB schema parameters. 
+ * The save function then manages to save it into the DB. 
+ * The res param (the response) can send the result as a confirmation that the instance was added. 
+ */
+app.get("/addUser", (req, res) => {
+    const user = new UserData({
+        name: "John Doe", 
+        age: 22, 
+        profession: "Bartender", 
+        nationality: "American"
+    });
+
+
+    user.save().then((result) => {
+        res.send(result);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
 });
 
 //Opening a listening connection via express on port 5000.
